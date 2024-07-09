@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Regions
+{% endblock %}
+
+{% block main %}
+    <div>
+        <button id="go_back" onclick="window.history.back()">Go Back</button>
+    </div>
+    <form action="/by_region" method="post">
+        <div class="mb-3">
+            <h2>By what continent would you like to narrow down your search?</h2>
+        </div>
+        <div class="mb-3">
+            <a href='/continent?region=South_America'><button type="button">South America</button></a>
+        </div>
+        <div class="mb-3">
+            <a href="/continent?region=Europe"><button type="button">Europe</button></a>
+        </div>
+        <div class="mb-3">
+            <a href="/continent?region=North_America"><button type="button">North America</button></a>
+        </div>
+        <div class="mb-3">
+            <a href="/continent?region=Asia"><button type="button">Asia</button></a>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block main %}
+    <div>
+        <button id="go_back" onclick="window.history.back()">Go Back</button>
+    </div>
+    <div id="main-content" data-mydata="{{ data | tojson | safe }}"></div>
+{% endblock %}
+
+{% block footer %}
+    <script src="{{ url_for('static', filename='render_buttons_continent.js') }}"></script>
+    <script src="{{ url_for('static', filename='render_title_continent.js') }}"></script>
+    <script>var data = {{ data|tojson }};</script>
+{% endblock %}

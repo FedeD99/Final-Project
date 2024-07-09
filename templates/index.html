@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome!
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="post">
+        <div class="mb-3">
+            <h2>By what criteria do you want to narrow down your search?</h2>
+        </div>
+        <div class="mb-3">
+            <a href="/by_region"><button type="button">By Region</button></a>
+        </div>
+        <div class="mb-3">
+            <a href="/by_dining_exp"><button type="button">By Dining Experience</button></a>
+        </div>
+        <div class="mb-3">
+            <a href="https://www.google.com"><button type="button">No Preference</button></a>
+        </div>
+    </form>
+{% endblock %}
